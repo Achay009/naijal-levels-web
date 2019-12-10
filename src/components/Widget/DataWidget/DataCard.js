@@ -2,7 +2,7 @@ import React from 'react';
 import './DataCard.css'
 
 const DataCard = (props) =>(
-    <div className="card-data-info col-sm-2">
+    <div className="card-data-info col-sm-2 col-xs-3 ">
         <div class="card-data">
             <p className="card-timestamp">Timestamp</p>
             <p className="card-company">Company Name</p>

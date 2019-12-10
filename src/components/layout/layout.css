@@ -20,37 +20,37 @@ color: #09d3ac;
 .footer{
     width : 100%;
     height : 50px;
-    bottom : 0;
     position : absolute;
     background-color: #788b95;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
 }
 
 .App-body{
     padding-left: 100px;
     padding-right: 100px;
     overflow-y: scroll!important;
+    
 }
 /* .App-body{
     height : 500px;
     width : 100%;
-   
+
     min-height: 90vh;
 } */
 
-@media(max-width : 480px ){
-    .App-body{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-}
 
 .App-title{
     padding: 2px;
     margin-bottom : 2px;
-    align-self: auto;
+    align-self: center;
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.App-title p{
+    position: relative;
 }
 
 .App-head{
@@ -64,4 +64,18 @@ color: #09d3ac;
     display: flex;
     flex-direction : column;
     justify-content: center;
+}
+
+@media(max-width : 480px ){
+    .App-body{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+@media(max-width : 780px){
+    .App-title{
+        width : 110px;
+    }
 }

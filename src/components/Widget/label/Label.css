@@ -1,13 +1,22 @@
-.company-label{
+.label{
     border :10px 0 black;
     padding:5px 10px;
     padding-right: 30px;
     border-radius:12px;
-    background-color: rgba(168, 164, 164, 0.8);
+    background-color: rgba(168, 164, 164, 0.8)!important;
     width:90px;
     cursor: pointer;
+    margin: 2px;
 }
 
-.company-label{
+.label{
     color: black;
+    font-family: Nunito,sans-serif!important;
+    font-size: 10px;
+}
+
+@media(max-width : 780px){
+    .label{
+        border-radius : 20px;
+    }
 }

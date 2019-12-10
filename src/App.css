@@ -5,12 +5,13 @@
   position: relative;
   min-height: 100vh;
   padding: 0px;
+  position : relative;
 }
 
 .App-logo {
   height: 10vmin;
 }
-
+layou
 .App-header {
   background-color: #282c34;
   min-height: 50vh;

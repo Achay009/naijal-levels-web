@@ -5,12 +5,17 @@
     height : 50%
 }
 
+
 .tag{
     margin: 12px;
     font-style: bold;
-    font-weight : 10px;
+    font-weight : 20px;
     color: black;
     align-self: flex-start;
+}
+
+.data-tags{
+    justify-content: center!important;
 }
 
 .company{
@@ -33,4 +38,49 @@
     align-self: flex-end;
     font-family: inherit;
     padding: 5px;
+}
+
+.company-label{
+    background-color: inherit!important;
+    font-family: Nunito,sans-serif!important;
+
+    font-size: 16px!important;
+    line-height: 24px;
+    align-self: flex-start;
+}
+
+.company-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.companies{
+    display: flex !important;
+}
+.company-tag1{
+    align-self: flex-start !important;
+}
+.company-tag2{
+    align-self: flex-end !important;
+}
+
+
+
+@media(max-width : 480px ){
+    .col-sm-2:nth-child(4){
+        display: none !important;
+    }
+    .col-sm-2:nth-child(5){
+        display: none !important;
+    }
+    .col-sm-2:nth-child(6){
+        display: none !important;
+    }
+
+}
+
+@media(min-width : 780px){
+    .level-section{
+        padding : 0!important;
+    }
 }

@@ -7,7 +7,7 @@ class Layout extends Component{
     constructor(props){
         super(props);
         this.state = {
-        
+            
         }
 
         
@@ -19,7 +19,7 @@ class Layout extends Component{
             <div className="nav-head">
             <div className="App-head">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p className="App-title"> Naija Levels</p>
+                <p className="App-title"> Naija.Levels</p>
             </div>
             <Dropdown/>
             

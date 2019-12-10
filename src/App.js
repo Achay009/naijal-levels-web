@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
 import  Layout  from '../src/components/layout/layout';
-import DataCard from '../src/components/Widget/DataWidget/DataCard';
 import Routes from '../src/components/Route/Route';
 import {
   BrowserRouter as Router,
@@ -19,7 +18,7 @@ class App extends Component {
 
           <div className="App">
             <Layout>
-             <Routes/> 
+              <Routes/> 
             </Layout>
           </div>
 

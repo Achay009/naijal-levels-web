@@ -7,7 +7,7 @@ import AddCompanies from '../../containers/AddCompanies/AddCompanies';
 const Routes = (props) => (
     <Switch>
         <Route exact path ='/'>
-           <Home/> 
+            <Home/> 
         </Route>
         <Route exact path='/add_levels'>
             <AddLevels/>
