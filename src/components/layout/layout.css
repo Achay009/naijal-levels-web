@@ -24,6 +24,8 @@ color: #09d3ac;
     background-color: #788b95;
     padding: 20px;
     text-align: center;
+    bottom: 0!important;
+    
 }
 
 .App-body{
@@ -58,6 +60,17 @@ color: #09d3ac;
     flex-direction: row;
     top : 5px;
     justify-content : center;
+}
+
+.circle-btn{
+    border-radius: 50px !important;
+    float: right;
+}
+
+.anchor-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .nav-head{
