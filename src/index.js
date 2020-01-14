@@ -5,6 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 //import './custom.scss';
+import axios from 'axios'
+
+axios.defaults.baseURL = "http://127.0.0.1:8000/api/";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

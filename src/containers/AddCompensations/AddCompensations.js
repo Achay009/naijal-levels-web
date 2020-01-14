@@ -1,6 +1,11 @@
 
 import React, { Component } from 'react';
 import  LargeButton  from "../../components/LargeButton/LargeButton";
+import ContentLoader from 'react-content-loader';
+import CompModal from '../../components/CompensationModal/CompensationModal';
+import './Add_Compensations.css';
+import checkBox from '../../components/CheckBox/CheckBox';
+
 
 
 class AddCompensations extends Component {
@@ -12,7 +17,7 @@ class AddCompensations extends Component {
     }
 
     handleClick = (event) =>{
-        alert('I have arrived')
+        
         console.log(event)
     }
 
@@ -21,30 +26,117 @@ class AddCompensations extends Component {
     render() {
         return (
             <div className="add_companaies_section">
-                <div className="row">
-                    <div className="col-md-6  mt-1 ">
+
+                <div className="row justify-contents mt-2 ">
+                    <div className="col-md-6 col-6 offset-md-3 mt-1 ">
+                        
                         <LargeButton clicked = {this.handleClick} title ="Add Level"/>
                     </div>
-                    <div className="col-md-6 mt-1 ">
+                    <div className="col-md-6 col-6 mt-1 ">
                         <LargeButton clicked = {this.handleClick} title ="Add Compensation"/>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="add_form col-md-12">
-                        <form className="mt-5 col-md-12">
-                            <div class="input-group input-group-lg">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-                                </div>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
+                <br/>
+                <section className="row">
+                    <div className="col-md-6 col-12 offset-md-3 text-center p-2">
+                        <form >
+                            <div className="form-group ">
+                                <input type="text" className="form-control form-control-lg" id="inputCompanyName" placeholder="Company Name"/>
+                                <small id="inputCompanyName" className="form-text float-left text-muted">Please enter company</small>
                             </div>
-                        </form>   
+                            <br/>
+                            <div className="form-group ">
+                                <input type="text" className="form-control form-control-lg" id="inputLevelName" placeholder="Level"/>
+                                <small id="inputLevelName" className="form-text float-left text-muted">Enter the level for whichever company you are at. Ex. Senior or Junior or Intermediate or Staff or L4 or E3 etc</small>
+                            </div>
+                            <br/>
+                            <div className="form-group">
+                                <select className="form-control form-control-lg" id="inputTitle" placeholder="Select Title">
+                                <option>Select Title</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                </select>
+                            </div>
+                            <br/>
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">&#x20A6;</span>
+                                </div>
+                                <input type="text" placeholder="Total Salary"className="form-control form-control-lg" aria-label="Amount (to the nearest dollar)"/>
+                                <div className="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                                <small className="form-text">Salary + Bonus + Stock you will make this year in thousands (ex. &#x20A6;125,000 -> 125). Easy way to get this number is look at your W2 and adjust for this year.</small>
+                            </div>
+                            <br/>
+                            <div className="form-group ">
+                                <input type="text" className="form-control form-control-lg" id="inputLocation" placeholder="Company Name"/>
+                            </div>
+                            <br/>
+                            <div className="form-row">
+                                <div className="col-md-6 col-6 float-left">
+                                    <input type="text" className="form-control form-control-lg" placeholder="Years of experience"/>
+                                </div>
+                                <div className="col-md-6 col-6">
+                                    <input type="text" className="form-control form-control-lg" placeholder="Years at company"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div className="form-group">
+                                <select className="form-control form-control-lg" id="inputTitle">
+                                <option>Select Tag</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                </select>
+                            </div>
+                            <br/>
+                            <center><h4>Compensation Breakdown</h4></center>
+                            <br/>
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">&#x20A6;</span>
+                                </div>
+                                <input type="text" className="form-control form-control-lg" placeholder="Base Salary" aria-label="Amount (to the nearest dollar)"/>
+                                <div className="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+                            <br/>
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">&#x20A6;</span>
+                                </div>
+                                <input type="text" className="form-control form-control-lg" placeholder=" Yealy Bonus" aria-label="Amount (to the nearest dollar)"/>
+                                <div className="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>     
+                            </div>
+                            <checkBox/>
+                        </form>
                     </div>
-
-                </div>
+                </section>
             </div>
         );
     }
 }
+
+
+
+const DataCardLoader = () => (
+    <ContentLoader
+    height={280}
+    width={500}
+    speed={2}
+    primaryColor="#f3f3f3"
+    secondaryColor="#ecebeb"
+    >
+    <rect x="3" y="3" rx="10" ry="10" width="150" height="100" />
+    </ContentLoader>
+);
+
 
 export default AddCompensations;

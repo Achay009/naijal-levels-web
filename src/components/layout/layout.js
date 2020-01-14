@@ -17,15 +17,26 @@ class Layout extends Component{
         return (
         <div className="App">
             <header className="App-header">
-            <div className="nav-head">
-            <div className="App-head">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p className="App-title"> Naija.Levels</p>
-            
-            </div>
-            <Dropdown/>
-            <div className="anchor-div">
-                <div className="circle-btn">
+                <div className="nav-head">
+                    <div className="App-head">
+                        <img src={logo} className="App-logo" alt="logo" />
+                        <p className="App-title"> Naija.Levels</p>
+                    
+                    </div>
+                    <Dropdown/>
+                    
+                </div>
+
+            {/* <a
+                className="App-link"
+                href="https://reactjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Learn React
+            </a> */}
+            {/* <div className="anchor-div">
+                    <div className="circle-btn">
                         <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -37,24 +48,14 @@ class Layout extends Component{
                             <Link class="dropdown-item">Separated link</Link>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            {/* <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a> */}
+                </div> */}
             </header>
             <div className='App-body'>
                 {this.props.children}
             </div>
-            <div className="footer">
+            <footer className="footer">
                 
-            </div>
+            </footer>
         </div>   
         
         );

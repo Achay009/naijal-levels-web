@@ -4,16 +4,16 @@ import Label from '../Widget/label/Label';
 
 
 const Level = (props)=>{
-    let numbers = [2,3,4,5,6,7];
+    let numbers = [2,3,4,];
 
     let listedItems = numbers.map((number) =>
-        <tr className="table-info"><td>{number}  </td></tr>  
+        <tr onClick={props.toggleModal} className="table-info"><td ><span className="span" onClick={props.toggleModal} data-toggle="modal" data-target="#exampleModal">{number}</span></td></tr>  
     );
 
    // var level = (props.title)?props.title : 'Input level';
     return (
         <div className="col-md-4 col-4 table-div">
-            <Label/>
+            <i className="fa fa-times fa-level-header" id="" style={{position:"relative",color:"#505050",paddingRight:"3px" }} aria-hidden="false"></i><Label/>
             <table className="table">
                 <tbody>
                     {listedItems}
