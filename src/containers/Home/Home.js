@@ -14,10 +14,10 @@ class Home extends Component{
     constructor(props){
         super(props);
             this.state = {
-                compensationWithTitlesData :{},
-                recentCompensationWithTitlesData :{},
-                companies :{},
-                titles :{},
+                compensationData :[],
+                recentCompensation :[],
+                companies :[],
+                titles :[],
                 loading : false,
                 showModal : false,
                 modalInformation : {}
@@ -29,31 +29,39 @@ class Home extends Component{
     toggleDisplay = (e)=> {
         
         this.setState({showModal : !this.state.showModal});
-        console.log(e.target)
+        
     }
 
     
 
     componentDidMount(){
         populateHomePage().then(response =>{
-            console.log(response.data.data);
+            this.setState({
+                compensationData : response.data.data.compensation_data,
+                titles : response.data.data.titles,
+                companies : response.data.data.companies,
+                recentCompensation : response.data.data.recent_compensations
+            })
         }).catch(err =>{
             console.log(err);
         })
     }
 
     render(){
+
+        let recentComp = this.state.recentCompensation;
+        const listRecentComp = recentComp.map((comp) =>
+            <DataCard Compensation={comp} key={comp.id}/>
+        );
+
+        
         return(
             <div className='container home-view'>
                 <div className="row recent-contributions">
                         <p className="tag">Recent Contribution</p>
             
-                        <div className="row data-tags">            
-                            <DataCard/>
-                            <DataCard/>
-                            <DataCard/>
-                            <DataCard/>
-                            <DataCard/>
+                        <div className="row data-tags">
+                            {listRecentComp}
                         </div>
                         <span className="view-all">View All<i className="fas fa-long-arrow-right"></i></span>
                 </div>

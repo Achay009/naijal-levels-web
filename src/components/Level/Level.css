@@ -26,7 +26,7 @@ tr{
 }
 @media(max-width : 780px){
     tr,td{
-        
+
         border-radius: 7px!important;
         border-style: none!important;
     }

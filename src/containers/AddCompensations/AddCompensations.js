@@ -4,7 +4,8 @@ import  LargeButton  from "../../components/LargeButton/LargeButton";
 import ContentLoader from 'react-content-loader';
 import CompModal from '../../components/CompensationModal/CompensationModal';
 import './Add_Compensations.css';
-import checkBox from '../../components/CheckBox/CheckBox';
+import CheckBox from '../../components/CheckBox/CheckBox';
+import ContributeModal from '../../components/ContributeModal/ContributeModal'
 
 
 
@@ -17,7 +18,6 @@ class AddCompensations extends Component {
     }
 
     handleClick = (event) =>{
-        
         console.log(event)
     }
 
@@ -26,14 +26,14 @@ class AddCompensations extends Component {
     render() {
         return (
             <div className="add_companaies_section">
-
-                <div className="row justify-contents mt-2 ">
-                    <div className="col-md-6 col-6 offset-md-3 mt-1 ">
+                <ContributeModal/>
+                <div className="row mt-2 p-2 ">
+                    <div className="col-md-6 col-6 mt-1 ">
                         
-                        <LargeButton clicked = {this.handleClick} title ="Add Level"/>
+                        <LargeButton clicked = {this.handleClick} title ="Add Level" float="float-right"/>
                     </div>
                     <div className="col-md-6 col-6 mt-1 ">
-                        <LargeButton clicked = {this.handleClick} title ="Add Compensation"/>
+                        <LargeButton clicked = {this.handleClick} title ="Add Compensation" float="float-left"/>
                     </div>
                 </div>
                 <br/>
@@ -72,7 +72,7 @@ class AddCompensations extends Component {
                             </div>
                             <br/>
                             <div className="form-group ">
-                                <input type="text" className="form-control form-control-lg" id="inputLocation" placeholder="Company Name"/>
+                                <input type="text" className="form-control form-control-lg" id="inputLocation" placeholder="Location"/>
                             </div>
                             <br/>
                             <div className="form-row">
@@ -115,8 +115,21 @@ class AddCompensations extends Component {
                                     <span class="input-group-text">.00</span>
                                 </div>     
                             </div>
-                            <checkBox/>
+                            <div className="row">
+                                <div className="col-md-4 col-4"><CheckBox gender="Male"/></div>
+                                <div className="col-md-4 col-4"><CheckBox gender="Female"/></div>
+                                <div className="col-md-4 col-4"><CheckBox gender="Other"/></div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-4 col-4"><CheckBox gender="Bsc"/></div>
+                                <div className="col-md-4 col-4"><CheckBox gender="Msc"/></div>
+                                <div className="col-md-4 col-4"><CheckBox gender="Phd"/></div>
+                            </div>
+                            <SubmitButton/>
+                           
                         </form>
+                        <br/>
+                        <br/>
                     </div>
                 </section>
             </div>
@@ -138,5 +151,8 @@ const DataCardLoader = () => (
     </ContentLoader>
 );
 
+const SubmitButton = (props) =>(
+    <button type="submit" style={{width: "100%"}} className="btn btn-success btn-lg">Submit</button>
+);
 
 export default AddCompensations;
