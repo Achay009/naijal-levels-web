@@ -13,7 +13,7 @@ const Level = (props)=>{
    // var level = (props.title)?props.title : 'Input level';
     return (
         <div className="col-md-4 col-4 table-div">
-            <i className="fa fa-times fa-level-header" id="" style={{position:"relative",color:"#505050",paddingRight:"3px" }} aria-hidden="false"></i><Label/>
+            <i className="fa fa-times fa-level-header" style={{position:"relative",color:"#505050",paddingRight:"3px" }} aria-hidden="false"></i><Label/>
             <table className="table">
                 <tbody>
                     {listedItems}

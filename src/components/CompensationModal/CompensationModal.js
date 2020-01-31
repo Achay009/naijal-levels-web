@@ -12,9 +12,9 @@ const CompModal = (props)=>{
                 <ModalHeader>
                 <ModalTitle>Hi</ModalTitle>
                 </ModalHeader>
-                <ModalBody>asdfasdf</ModalBody>
-                <ModalBody>asdfasdf</ModalBody>
-                <ModalBody>asdfasdf</ModalBody>
+                <ModalBody>
+                    asdfasdf
+                </ModalBody>
                 <ModalFooter>This is the footer</ModalFooter>
             </Modal>
         </div>

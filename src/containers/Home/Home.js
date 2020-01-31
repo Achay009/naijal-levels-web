@@ -35,6 +35,7 @@ class Home extends Component{
     
 
     componentDidMount(){
+        this.setState({loading : !this.state.loading});
         populateHomePage().then(response =>{
             this.setState({
                 compensationData : response.data.data.compensation_data,
@@ -54,6 +55,10 @@ class Home extends Component{
             <DataCard Compensation={comp} key={comp.id}/>
         );
 
+        let Companies = this.state.companies.map((company)=>
+            <Label company={company}/>
+        );
+
         
         return(
             <div className='container home-view'>
@@ -69,9 +74,7 @@ class Home extends Component{
                     <p className="tag">Companies</p>
                     <div className="row companies">
                         <div className="col-md-6 company-tag1">
-                            <Label/>
-                            <Label/>
-                            <Label/>
+                            {Companies}
                         </div>
                         <div className="col-md-6 company-tag2">
                             <Label/>

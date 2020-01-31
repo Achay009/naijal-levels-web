@@ -6,7 +6,7 @@ const DataCard = (props) =>(
         <div class="card-data">
             <p className="card-timestamp">Timestamp</p>
             <p className="card-company">{props.Compensation.company}</p>
-            <p className="card-compensation">{props.Compensation.total}</p>
+            <p className="card-compensation">&#x20A6;{props.Compensation.total}</p>
             <p className="card-location">{props.Compensation.location}</p>
         </div>
     </div>
